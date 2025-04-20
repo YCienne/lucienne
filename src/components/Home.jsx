@@ -15,7 +15,7 @@ const Home = () => {
       </div>
       <div className="md:w-1/2 text-center md:text-left mt-6 md:mt-0">
         <h1 className="text-4xl sm:text-7xl font-bold mb-4">
-          Hi, I'm <span className="text-green-600">GODFRED AWUKU</span>
+          Hi, I'm <span className="text-green-600">Godfred Awuku</span>
         </h1>
         <h3 className="text-2xl sm:text-3xl font-semibold mb-4">
           I am a <span className="text-green-600">
@@ -24,7 +24,7 @@ const Home = () => {
         <TypeAnimation
         sequence={
           [
-            "Software Enginner", 1000,
+            "Software Engineer", 1000,
             "Full Stack Developer", 1000,
           ]
         }
@@ -37,11 +37,11 @@ const Home = () => {
           </span>
         </h3>
         <p className="text-sm sm:text-lg mb-6">
-        Hi, I'm Pincode — a full stack software engineer passionate about crafting clean, efficient, and scalable solutions.
+        Hi, I'm Godfred, a full stack software engineer passionate about crafting clean, efficient, and scalable solutions.
         From low-level systems with C to dynamic web apps with Python and modern JavaScript frameworks, I love turning ideas into working products.
         </p>
         <SocialIcons></SocialIcons>
-        <Button text="Hire Me" href="#"></Button>
+        <Button text="Hire Me" href="#contact" />
       </div>
     </section>
   );

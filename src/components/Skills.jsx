@@ -24,20 +24,19 @@ const ServiceCard = ({ index, title, icon }) => {
 const Skills = () => {
   return (
     <section id='skills' className="py-20 px-6 md:px-12 lg:px-20 bg-black">
-      {/* Header */}
+      
       <motion.div
         variants={textVariant()}
         className="text-center mb-10"
       >
-        <h2 className="text-white text-4xl md:text-5xl font-bold">
+        <h2 className="text-white text-4xl md:text-5xl font-bold mt-12">
           Skills <span className="text-green-400">.</span>
         </h2>
       </motion.div>
 
-      {/* Description */}
       <motion.p
         variants={fadeIn('', '', 0.1, 1)}
-        className="text-gray-400 text-base md:text-lg leading-relaxed max-w-3xl mx-auto text-center mb-16"
+        className="text-gray-200 text-base md:text-lg leading-relaxed max-w-3xl mx-auto text-center mb-16"
       >
         I'm a skilled software developer with experience in TypeScript and JavaScript,
         and expertise in frameworks like React, Node.js, and Three.js. I'm a quick learner and
@@ -45,7 +44,6 @@ const Skills = () => {
         that solve real-world problems. Let’s work together to bring your ideas to life!
       </motion.p>
 
-      {/* Skill Cards */}
       <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 justify-items-center">
         {skills.map((skill, index) => (
           <ServiceCard key={skill.title} index={index} {...skill} />

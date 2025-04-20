@@ -26,6 +26,15 @@ export const skills = [
     
     ];
 
+export const navList = [
+    { id: 1, data: "Home" },
+    { id: 2, data: "Tech" },
+    { id: 3, data: "Skills" },
+    { id: 4, data: "Experience" },
+    { id: 5, data: "Projects" },
+    { id: 5, data: "Contact" },
+];
+
 export const experiences = [
     {
         title: "React.js Developer",

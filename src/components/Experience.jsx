@@ -3,7 +3,7 @@ import { experiences } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import 'react-vertical-timeline-component/style.min.css';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
-import { div } from "framer-motion/client";
+
 
 const ExperienceCard = ({ experience }) => (
   <VerticalTimelineElement
@@ -41,7 +41,7 @@ const Experience = () => {
   return (
     <>
     <motion.div variants={textVariant()}>
-      <h2 id='experience' className="text-white text-center font-bold text-[24px]">Work Experience</h2>
+      <h2 id='experience' className="text-white text-4xl md:text-5xl font-bold text-center mt-12">Work Experience</h2>
     </motion.div>
 
     <div className="mt-20 flex flex-col">

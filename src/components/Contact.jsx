@@ -2,7 +2,6 @@ import React, { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 
-// Animation variant: slide in from left
 const slideInFromLeft = {
   hidden: { opacity: 0, x: -100 },
   show: {
@@ -39,7 +38,7 @@ const Contact = () => {
           to_email: 'your@email.com',
           message: form.message,
         },
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY // 
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY 
       )
       .then(() => {
         alert('Message sent successfully!');
@@ -53,7 +52,7 @@ const Contact = () => {
 
   return (
     <div id='contact' className="mt-20 px-4 md:px-10 lg:px-32 pb-20">
-      {/* Header */}
+    
       <motion.div
         variants={slideInFromLeft}
         initial="hidden"
@@ -65,7 +64,7 @@ const Contact = () => {
         <h2 className="text-4xl md:text-5xl font-bold text-white">Contact</h2>
       </motion.div>
 
-      {/* Form */}
+      
       <motion.form
         ref={formRef}
         onSubmit={handleSubmit}
