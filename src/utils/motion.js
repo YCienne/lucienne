@@ -1,5 +1,3 @@
-// src/utils/motion.js
-
 export const textVariant = () => ({
     hidden: { opacity: 0, y: -50 },
     show: {
