@@ -26,7 +26,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-  
+
     emailjs
       .send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID, 
@@ -51,20 +51,20 @@ const Contact = () => {
   };
 
   return (
-    <div id='contact' className="mt-20 px-4 md:px-10 lg:px-32 pb-20">
-    
+    <section id="contact" className="relative overflow-hidden mt-20 px-4 md:px-10 lg:px-32 pb-20">
+
+      {/* Foreground content */}
       <motion.div
         variants={slideInFromLeft}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="mb-10 text-center md:text-left"
+        className="relative z-10 mb-10 text-center md:text-left"
       >
-        <p className="text-sm text-green-400 uppercase tracking-widest mb-2 mt-12">Get in Touch</p>
+        <p className="text-sm text-yellow-400 uppercase tracking-widest mb-2 mt-12">Get in Touch</p>
         <h2 className="text-4xl md:text-5xl font-bold text-white">Contact</h2>
       </motion.div>
 
-      
       <motion.form
         ref={formRef}
         onSubmit={handleSubmit}
@@ -72,7 +72,7 @@ const Contact = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="max-w-3xl mx-auto bg-[#1f1f2e] p-8 rounded-xl shadow-lg space-y-6"
+        className="relative z-10 max-w-3xl mx-auto bg-[#1f1f2e] p-8 rounded-xl shadow-lg space-y-6"
       >
         <div>
           <label className="block text-white mb-1 text-sm">Your Name</label>
@@ -82,7 +82,7 @@ const Contact = () => {
             value={form.name}
             onChange={handleChange}
             placeholder="Enter your name"
-            className="w-full p-3 rounded-md bg-[#2c2c40] text-white focus:outline-none focus:ring-2 focus:ring-green-400"
+            className="w-full p-3 rounded-md bg-[#2c2c40] text-white focus:outline-none focus:ring-2 focus:ring-yellow-400"
           />
         </div>
 
@@ -94,7 +94,7 @@ const Contact = () => {
             value={form.email}
             onChange={handleChange}
             placeholder="Enter your email"
-            className="w-full p-3 rounded-md bg-[#2c2c40] text-white focus:outline-none focus:ring-2 focus:ring-green-400"
+            className="w-full p-3 rounded-md bg-[#2c2c40] text-white focus:outline-none focus:ring-2 focus:ring-yellow-400"
           />
         </div>
 
@@ -106,18 +106,19 @@ const Contact = () => {
             value={form.message}
             onChange={handleChange}
             placeholder="Write your message..."
-            className="w-full p-3 rounded-md bg-[#2c2c40] text-white focus:outline-none focus:ring-2 focus:ring-green-400 resize-none"
+            className="w-full p-3 rounded-md bg-[#2c2c40] text-white focus:outline-none focus:ring-2 focus:ring-yellow-400 resize-none"
           />
         </div>
 
         <button
           type="submit"
-          className="w-full py-3 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-md transition duration-300"
+          className="w-full py-3 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold rounded-md transition duration-300"
         >
           Send Message
         </button>
       </motion.form>
-    </div>
+
+    </section>
   );
 };
 

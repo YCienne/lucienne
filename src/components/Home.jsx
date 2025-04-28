@@ -10,15 +10,15 @@ const Home = () => {
         <img
           src={HeroImage}
           alt="pincode"
-          className="rounded-full w-48 sm:w-64 md:w-80 lg:w-[350px] xl:w-[400px] shadow-lg hover:scale-110 transition duration-300 hover:shadow-[0_0_15px_3px_rgba(128,0,128,0.8)]"
+          className="rounded-full w-48 sm:w-64 md:w-80 lg:w-[350px] xl:w-[400px] shadow-lg hover:scale-110 transition duration-300 hover:shadow-[0_0_15px_3px_rgba(255, 223, 0, 0.8)]"
         />
       </div>
       <div className="md:w-1/2 text-center md:text-left mt-6 md:mt-0">
         <h1 className="text-4xl sm:text-7xl font-bold mb-4">
-          Hi, I'm <span className="text-green-600">Godfred Awuku</span>
+          Hi, I'm <span className="text-yellow-600">Godfred Awuku</span>
         </h1>
         <h3 className="text-2xl sm:text-3xl font-semibold mb-4">
-          I am a <span className="text-green-600">
+          I am a <span className="text-yellow-600">
 
 
         <TypeAnimation

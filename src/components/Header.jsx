@@ -11,7 +11,7 @@ const Header = () => {
     const observerOptions = {
       root: null,
       rootMargin: "0px",
-      threshold: 0.6, // 60% visible
+      threshold: 0.6, 
     };
 
     const callback = (entries) => {
@@ -39,7 +39,7 @@ const Header = () => {
 
   return (
     <header className="fixed w-full flex justify-between items-center p-4 z-50 backdrop-blur-md bg-black/30 transition-shadow mb-16">
-      <a href='#' className="text-3xl font-extrabold text-green-600 hover:scale-110 transition duration-300">
+      <a href='#' className="text-3xl font-extrabold text-yellow-600 hover:scale-110 transition duration-300">
         GODFRED <span>.</span>
       </a>
 
@@ -50,8 +50,8 @@ const Header = () => {
             href={`#${nav.data.toLowerCase()}`}
             className={`ml-8 text-lg font-medium transition-all duration-300 ${
               active === nav.data
-                ? "text-green-500 border-b-2 border-green-500"
-                : "text-white hover:text-green-600 border-b-2 border-transparent hover:border-green-500"
+                ? "text-yellow-600 border-b-2 border-yellow-500"
+                : "text-white hover:text-yellow-600 border-b-2 border-transparent hover:border-yellow-500"
             }`}
             onClick={() => setActive(nav.data)}
           >
@@ -80,7 +80,7 @@ const Header = () => {
                 <li
                   key={nav.id}
                   className={`font-medium cursor-pointer text-base transition ${
-                    active === nav.data ? "text-green-500" : "text-white hover:text-green-600"
+                    active === nav.data ? "text-yellow-500" : "text-white hover:text-yellow-600"
                   }`}
                   onClick={() => {
                     setActive(nav.data);
