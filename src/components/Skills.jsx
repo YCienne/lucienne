@@ -5,6 +5,10 @@ import { skills } from '../constants'
 import { fadeIn, textVariant } from '../utils/motion'
 
 const ServiceCard = ({ index, title, icon }) => {
+  const handleImageError = () => {
+    console.error(`Error loading image for skill: ${title}`);
+  };
+
   return (
     <Tilt className="w-full sm:w-[200px] md:w-[220px] lg:w-[250px]">
       <motion.div
@@ -12,8 +16,12 @@ const ServiceCard = ({ index, title, icon }) => {
         className="bg-gradient-to-br from-[#1f1f2e] to-[#141421] p-[2px] rounded-[20px] shadow-md hover:shadow-xl transition duration-300"
       >
         <div className="bg-[#0e0e1c] rounded-[20px] py-10 px-6 min-h-[260px] flex flex-col items-center justify-center text-center relative">
-
-          <img src={icon} alt={title} className="w-16 h-16 object-contain mb-4" />
+          <img
+            src={icon}
+            alt={title}
+            className="w-16 h-16 object-contain mb-4"
+            onError={handleImageError}
+          />
           <h3 className="text-white text-lg font-semibold">{title}</h3>
         </div>
       </motion.div>

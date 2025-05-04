@@ -1,5 +1,6 @@
 {
   "name": "portfolio_p",
+  "homepage": "https://YCienne.github.io/portfolio_p/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,7 +8,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -17,6 +20,7 @@
     "@tailwindcss/vite": "^4.1.4",
     "autoprefixer": "^10.4.21",
     "framer-motion": "^12.7.4",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.5.3",
     "prop-types": "^15.8.1",
     "react": "^19.0.0",

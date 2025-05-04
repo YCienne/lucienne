@@ -11,7 +11,7 @@ const Header = () => {
     const observerOptions = {
       root: null,
       rootMargin: "0px",
-      threshold: 0.6, 
+      threshold: 0.6,
     };
 
     const callback = (entries) => {
@@ -22,19 +22,31 @@ const Header = () => {
       });
     };
 
-    const observer = new IntersectionObserver(callback, observerOptions);
-    
-    navList.forEach(nav => {
-      const section = document.getElementById(nav.data.toLowerCase());
-      if (section) observer.observe(section);
-    });
+    try {
+      const observer = new IntersectionObserver(callback, observerOptions);
 
-    return () => {
       navList.forEach(nav => {
         const section = document.getElementById(nav.data.toLowerCase());
-        if (section) observer.unobserve(section);
+        if (section) {
+          observer.observe(section);
+        } else {
+          console.error(`Section with ID ${nav.data.toLowerCase()} not found for intersection observer.`);
+        }
       });
-    };
+
+      return () => {
+        navList.forEach(nav => {
+          const section = document.getElementById(nav.data.toLowerCase());
+          if (section) {
+            observer.unobserve(section);
+          } else {
+            console.error(`Section with ID ${nav.data.toLowerCase()} not found for intersection observer removal.`);
+          }
+        });
+      };
+    } catch (error) {
+      console.error("Error initializing IntersectionObserver:", error);
+    }
   }, []);
 
   return (
