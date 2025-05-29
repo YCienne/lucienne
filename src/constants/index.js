@@ -1,4 +1,8 @@
 import web from "../assets/icons/web.png";
+import nn from "../assets/icons/nn.gif";
+import dig from "../assets/icons/dig.gif";
+import ai from "../assets/icons/ai.gif";
+import AI1 from "../assets/icons/AI1.gif";
 import html5 from "../assets/icons/html5.png";
 import react from "../assets/icons/react.png";
 import angular from "../assets/icons/angular.png";
@@ -8,20 +12,20 @@ import backbone from "../assets/icons/backbone.png";
 
 export const skills = [
     {
-        title: "Software Engineer",
-        icon: web,
-    }, 
-    {
         title: "Software Engineering",
-        icon: web,
+        icon: dig,
     }, 
     {
-        title: "Software Development",
-        icon: web,
+        title: "Machine Learning",
+        icon: nn,
     }, 
     {
-        title: "Web Development",
-        icon: web,
+        title: "Generative AI Development",
+        icon: AI1,
+    }, 
+    {
+        title: "Web App Development",
+        icon: ai,
     }, 
     
     ];
@@ -37,46 +41,53 @@ export const navList = [
 
 export const experiences = [
     {
-        title: "React.js Developer",
-        company: "Starbucks",
+        title: "Generative AI Engineer",
+        company: "Reality AI Lab",
         icon: web,
-        date: "March 2020 – April 2021",
+        date: "December 2024 – Present",
         points: [
-            "Developed and maintained web applications using React.js and other related technologies.",
-            "Collaborated with designers, PMs, and developers to create high-quality products.",
-            "Ensured responsive design and cross-browser compatibility.",
+            " Developing Generative AI Solutions: Building features for Marvel AI using technologies such as LangChain, LlamaIndex, and Retrieval-Augmented Generation(RAG) workflows. ",
+            "Collaborating with a global team on open-source AI tools to make education more accessible. ",
+            " Deploying AI services using Google Cloud Run, monitored performance with Log Explorer, and refined outputs through LangSmith for prompt optimization.",
+        ],
+    },
+
+    {
+        title: "Software Engineer Coach",
+        company: "MEST Africa",
+        icon: web,
+        date: "Oct 2024 – Nov 2024",
+        points: [
+            "Guided frontend development trainees to build web applications using ReactJS.",
+            "Conducted in-depth code reviews, providing constructive feedback to improve code readability, efficiency and adherence to standards",
+            "Guided engineers to establish meaningful career goals, identify strengths and create personalized development plans",
+        ],
+    },
+
+    {
+        title: "End User Computing Support",
+        company: "Newmont Africa",
+        icon: web,
+        date: "Jan 2023 – October 2023",
+        points: [
+            "Provided on-site technical support and resolved issues for users across various technology platforms.",
+            "Diagnosed and resolved hardware, network, and software issues in both mobile and fixed devices.",
+            "Maintained operational integrity of technology facilities, including printers, audiovisual equipment, and meeting rooms.",
         ],
     },
     {
-        title: "React Native Developer",
-        company: "Tesla",
+        title: "Software Engineer, Intern",
+        company: "Turntabl",
         icon: web,
-        date: "Jan 2021 – Feb 2022",
+        date: "May 2021 – June 2021",
         points: [
-            "Built mobile applications using React Native.",
-            "Implemented animations and optimized app performance.",
+            "Collaborated with a team to develop a web-based application for real-time sign language translation.",
+            "Trained the sign language recognition model using Google Teachable Machine with custom datasets. ",
+            "Designed and developed the frontend interface using HTML, CSS, and JavaScript to deliver an intuitive user experience. ",
+            "Built and managed the database using SQLite for efficient data storage and retrieval.",
         ],
     },
-    {
-        title: "React Native Developer",
-        company: "Tesla",
-        icon: web,
-        date: "Jan 2021 – Feb 2022",
-        points: [
-            "Built mobile applications using React Native.",
-            "Implemented animations and optimized app performance.",
-        ],
-    },
-    {
-        title: "React Native Developer",
-        company: "Tesla",
-        icon: web,
-        date: "Jan 2021 – Feb 2022",
-        points: [
-            "Built mobile applications using React Native.",
-            "Implemented animations and optimized app performance.",
-        ],
-    },
+    
 ];
 
 export const technologies = [
@@ -108,40 +119,31 @@ export const technologies = [
 
 export const projects = [
     {
-        name: "AI Recipe Generator",
+        name: "AI Home-based Weapon Detection Security System",
         image: python,
-        shortDescription: "Create custom recipes using selected ingredients.",
+        shortDescription: "Detects weapon on home intruders.",
         fullDescription:
-            "This AI-powered web app helps users generate unique recipes based on ingredients they have. Built with Flask and React, it uses an LLM for recipe creation.",
-        techStack: ["React", "Flask", "OpenAI API", "Bootstrap"],
-        demoLink: "https://google.com"
+            "This system is built to detect weapon(knife) on home intruders in the absence of the home owner. With features such as taking snapshots of the intruder with the weapon and alerting the home owner through text messaging, it enhances home security.",
+        techStack: ["Python", "YOLOv5", "OpenCV"],
+        demoLink: "#"
     },
     {
-        name: "AI Recipe Generator",
+        name: "SiKiZa",
         image: python,
-        shortDescription: "Create custom recipes using selected ingredients.",
+        shortDescription: "Translates sign language to text",
         fullDescription:
-            "This AI-powered web app helps users generate unique recipes based on ingredients they have. Built with Flask and React, it uses an LLM for recipe creation.",
-        techStack: ["React", "Flask", "OpenAI API", "Bootstrap"],
-        demoLink: "https://google.com"
+            "This project is a real-time sign language translator. This project was initiated with the purpose of bridging the gap between the hearing-impaired community and the community without such disability.",
+        techStack: ["Flask", "Python", "HTML", "CSS", "JavaScript", "SQLite", "Google Teachable Machine"],
+        demoLink: "https://github.com/YCienne/SiKiZa"
     },
     {
-        name: "AI Recipe Generator",
+        name: "Ignition",
         image: python,
-        shortDescription: "Create custom recipes using selected ingredients.",
+        shortDescription: "A website for an event center",
         fullDescription:
-            "This AI-powered web app helps users generate unique recipes based on ingredients they have. Built with Flask and React, it uses an LLM for recipe creation.",
-        techStack: ["React", "Flask", "OpenAI API", "Bootstrap"],
-        demoLink: "https://google.com"
-    },
-    {
-        name: "AI Recipe Generator",
-        image: python,
-        shortDescription: "Create custom recipes using selected ingredients.",
-        fullDescription:
-            "This AI-powered web app helps users generate unique recipes based on ingredients they have. Built with Flask and React, it uses an LLM for recipe creation.",
-        techStack: ["React", "Flask", "OpenAI API", "Bootstrap"],
-        demoLink: "https://google.com"
+            "This website is to help clients easily locate and identify the event center and the services rendered.",
+        techStack: ["ReactJS", "JavaScript", "Tailwind CSS"],
+        demoLink: "https://ignition-kutunse.netlify.app/"
     },
 ];
 

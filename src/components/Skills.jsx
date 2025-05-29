@@ -19,7 +19,7 @@ const ServiceCard = ({ index, title, icon }) => {
           <img
             src={icon}
             alt={title}
-            className="w-16 h-16 object-contain mb-4"
+            className="w-20 h-20 object-contain mb-4"
             onError={handleImageError}
           />
           <h3 className="text-white text-lg font-semibold">{title}</h3>
@@ -45,10 +45,7 @@ const Skills = () => {
         variants={fadeIn('', '', 0.1, 1)}
         className="text-gray-200 text-base md:text-lg leading-relaxed max-w-3xl mx-auto text-center mb-16"
       >
-        I'm a skilled software developer with experience in TypeScript and JavaScript,
-        and expertise in frameworks like React, Node.js, and Three.js. I'm a quick learner and
-        collaborate closely with clients to create efficient, scalable, and user-friendly solutions
-        that solve real-world problems. Let's work together to bring your ideas to life!
+        I'm a skilled Generative AI Engineer with experience in Python and machine learning frameworks, specializing in building applications powered by large language models and multimodal systems. I'm a fast learner who collaborates closely with teams to develop intelligent, scalable, and user-centric AI solutions. Let's work together to turn your vision into reality!
       </motion.p>
 
       <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 justify-items-center">

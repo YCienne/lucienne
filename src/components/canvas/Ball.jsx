@@ -3,8 +3,16 @@ import { Canvas } from '@react-three/fiber'
 import { Decal, Float, OrbitControls, Preload, useTexture } from '@react-three/drei'
 import CanvasLoader from './Loader'
 
-const Ball = (props) => {
-const [decal] = useTexture([props.imgUrl])
+const Ball = ({imgUrl}) => {
+    const [decal] = useTexture([imgUrl]);
+    const decalFaces = [
+        { position: [0, 0, 0.76], rotation: [0, 0, 0] },                
+        { position: [0, 0, -0.76], rotation: [0, Math.PI, 0] },         
+        { position: [0.76, 0, 0], rotation: [0, -Math.PI / 2, 0] },     
+        { position: [-0.76, 0, 0], rotation: [0, Math.PI / 2, 0] },     
+        { position: [0, 0.76, 0], rotation: [-Math.PI / 2, 0, 0] },     
+        { position: [0, -0.76, 0], rotation: [Math.PI / 2, 0, 0] },     
+    ];
 
     return (
         <Float speed={2} rotationIntensity={2} floatIntensity={3}>
@@ -12,7 +20,7 @@ const [decal] = useTexture([props.imgUrl])
             <directionalLight position={[5, 5, 5]} intensity={0.8} />
         
         <mesh castShadow receiveShadow scale={3}>
-            <icosahedronGeometry args={[1, 2]} /> 
+            <boxGeometry args={[1.5, 1.5, 1.5]} />
             
             <meshStandardMaterial
             color="#e0e0ff"
@@ -23,14 +31,17 @@ const [decal] = useTexture([props.imgUrl])
             flatShading={false}
             />
             
+            {decalFaces.map((face, index) => (
             <Decal
-            position={[0, 0, 1]}
-            rotation={[2 * Math.PI, 0, 6.25]}
-            scale={1.2}
-            map={decal}
-            flatShading
-            anisotropy={16}
+                key={index}
+                position={face.position}
+                rotation={face.rotation}
+                scale={[1.1, 1.1, 1.1]}
+                map={decal}
+                flatShading
+                anisotropy={16}
             />
+            ))}
         </mesh>
         </Float>
 
