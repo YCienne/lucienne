@@ -38,7 +38,7 @@ const SocialIcons = () => {
           <a
             key={index}
             href={icon.href}
-            className="w-10 h-10 flex items-center justify-center border-2 border-yellow-600 rounded-full text-yellow-600 hover:bg-yellow-600 hover:text-black transition hover:shadow-[0_0_15px_3px_rgba(128,0,128,0.8)]"
+            className="w-10 h-10 flex items-center justify-center border-2 border-gray-600 rounded-full text-gray-600 hover:bg-gray-600 hover:text-black transition hover:shadow-[0_0_15px_3px_rgba(128,0,128,0.8)]"
           >
             {icon.components}
           </a>

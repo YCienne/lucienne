@@ -51,8 +51,8 @@ const Header = () => {
 
   return (
     <header className="fixed w-full flex justify-between items-center p-4 z-50 backdrop-blur-md bg-black/30 transition-shadow mb-16">
-      <a href='#' className="text-3xl font-extrabold text-yellow-600 hover:scale-110 transition duration-300">
-        LUCIENNE <span>.</span>
+      <a href='#' className="text-3xl font-extrabold text-gray-500 hover:scale-110 transition duration-300">
+        CIENNE <span>.</span>
       </a>
 
       <nav className="hidden md:flex">
@@ -62,8 +62,8 @@ const Header = () => {
             href={`#${nav.data.toLowerCase()}`}
             className={`ml-8 text-lg font-medium transition-all duration-300 ${
               active === nav.data
-                ? "text-yellow-600 border-b-2 border-yellow-500"
-                : "text-white hover:text-yellow-600 border-b-2 border-transparent hover:border-yellow-500"
+                ? "text-gray-700 border-b-2 border-gray-500"
+                : "text-white hover:text-gray-700 border-b-2 border-transparent hover:border-gray-500"
             }`}
             onClick={() => setActive(nav.data)}
           >
@@ -92,7 +92,7 @@ const Header = () => {
                 <li
                   key={nav.id}
                   className={`font-medium cursor-pointer text-base transition ${
-                    active === nav.data ? "text-yellow-500" : "text-white hover:text-yellow-600"
+                    active === nav.data ? "text-gray-500" : "text-white hover:text-gray-600"
                   }`}
                   onClick={() => {
                     setActive(nav.data);

@@ -25,10 +25,10 @@ const Home = () => {
       </div>
       <div className="md:w-1/2 text-center md:text-left mt-6 md:mt-0">
         <h1 className="text-4xl sm:text-7xl font-bold mb-4">
-          Hi, I'm <span className="text-yellow-600">Lucienne Awoudi</span>
+          Hi, I'm <span className="text-gray-600">Lucienne Awoudi</span>
         </h1>
         <h3 className="text-2xl sm:text-3xl font-semibold mb-4">
-          I am a <span className="text-yellow-600">
+          I am a <span className="text-gray-500">
             <TypeAnimation
               sequence={[
                 "Software Engineer", 1000,
@@ -45,7 +45,7 @@ const Home = () => {
         Hi, I'm Cienne, a Generative AI Engineer passionate about building intelligent, creative systems. From fine-tuning language models to developing AI-driven applications with Python and cutting-edge frameworks, I love transforming complex ideas into impactful AI solutions.
         </p>
         <SocialIcons />
-        <Button text="Hire Me" href="#contact" />
+        <Button text="Call Me" href="#contact" />
       </div>
     </section>
   );
